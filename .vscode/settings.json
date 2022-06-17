@@ -116,6 +116,7 @@
         "spacingjs",
         "tinycolor",
         "unplugin",
+        "Vite",
         "vueuse",
         "vuex"
     ]
