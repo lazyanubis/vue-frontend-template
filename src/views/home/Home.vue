@@ -1,3 +1,13 @@
-<template> 12312 </template>
 <script lang="ts" setup></script>
-<style lang="less"></style>
+
+<template>
+    <div class="test"><div class="test2">12312444</div></div>
+</template>
+
+<style lang="less">
+.test {
+    .test2 {
+        color: red;
+    }
+}
+</style>
