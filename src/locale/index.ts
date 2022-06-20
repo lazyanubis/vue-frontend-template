@@ -1,4 +1,5 @@
-import { createI18n } from 'vue-i18n';
+// import { createI18n } from 'vue-i18n';
+import { createI18n } from 'vue-i18n/dist/vue-i18n.cjs.js';
 import commonLanguages from './languages/common';
 import { setHtmlPageLang } from './locales';
 
