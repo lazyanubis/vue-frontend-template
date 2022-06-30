@@ -1,5 +1,6 @@
 module.exports = {
     env: {
+        es2020: true,
         browser: true,
         node: true,
         es6: true,
