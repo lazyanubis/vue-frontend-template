@@ -4,12 +4,12 @@ module.exports = {
         browser: true,
         node: true,
         es6: true,
-        "vue/setup-compiler-macros": true,
+        'vue/setup-compiler-macros': true,
     },
     parser: 'vue-eslint-parser',
     parserOptions: {
         parser: '@typescript-eslint/parser', // 词法解析器使用@babel/eslint-parser
-        ecmaVersion: 2020,
+        ecmaVersion: esnext,
         sourceType: 'module', //设置为 "script" (默认) 或 "module"（如果你的代码是 ECMAScript 模块)。
     },
     extends: [
