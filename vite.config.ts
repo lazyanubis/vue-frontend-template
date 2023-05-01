@@ -106,6 +106,7 @@ export default defineConfig(({ command, mode }) => {
             // serve 独有配置 开发模式
             ...common,
             server: {
+                hmr: true, // 热更新
                 proxy: {
                     '/api': {
                         target: 'http://localhost',
