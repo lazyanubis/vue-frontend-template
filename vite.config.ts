@@ -2,6 +2,8 @@ import { defineConfig, loadEnv, UserConfig } from 'vite';
 import * as path from 'path';
 
 import { createVitePlugins } from './build/vite/plugins';
+import WindiCSS from 'vite-plugin-windicss';
+
 import { ViteEnv } from './types/model';
 
 enum ConfigMode {
@@ -37,7 +39,7 @@ export default defineConfig(({ command, mode }) => {
             'process.env.NODE_ENV': JSON.stringify(getNodeEnv(configMode)), // 接口文件里面需要用来判断 莫名其妙要加双引号
             'process.env': process.env, // 环境变量
         },
-        plugins: [...createVitePlugins(viteEnv, isBuild)], // 插件
+        plugins: [WindiCSS(), ...createVitePlugins(viteEnv, isBuild)], // 插件
         resolve: {
             alias: {
                 '@': path.resolve(__dirname, 'src'), // @符号要解析

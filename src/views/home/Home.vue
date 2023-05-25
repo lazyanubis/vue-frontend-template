@@ -1,7 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-    <div class="test"><div class="test2">12312444</div></div>
+    <div class="test bg-dark-900">
+        <div class="test2 w-300"> 12312444 </div>
+    </div>
 </template>
 
 <style lang="less">
