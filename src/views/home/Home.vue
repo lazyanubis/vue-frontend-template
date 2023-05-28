@@ -1,8 +1,10 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { t } from '@/locale';
+</script>
 
 <template>
     <div class="test bg-dark-900">
-        <div class="test2 w-300"> 12312444 </div>
+        <div class="test2 w-300"> {{ t('test.test') }} </div>
     </div>
 </template>
 

@@ -91,7 +91,7 @@ export function parseLanguage(key: string): string {
     const value = i18n.global.t(key);
     if (!value) {
         console.error(
-            `can not find multi-language value for key '${key}' with ${i18n.global.locale} environment. Check it please.`,
+            `can not find multi-language value for key '${key}' with ${i18n.global.locale} environment. Check please.`,
         );
     }
     return value;

@@ -1,8 +1,8 @@
-import { genMessage } from '../locales';
 import elementLocale from 'element-plus/lib/locale/lang/zh-cn';
 
-const modules = import.meta.globEager('./zh-CN/**/*.ts');
+import test from './zh-CN/test.yml';
+
 export default {
-    ...genMessage(modules, 'zh-CN'),
+    ...{ test },
     elementLocale,
 };
