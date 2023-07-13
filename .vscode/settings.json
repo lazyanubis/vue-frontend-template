@@ -89,6 +89,7 @@
             "source.fixAll.eslint": true
         }
     },
+    "css.lint.unknownAtRules": "ignore",
     "i18n-ally.localesPaths": ["src/locale/languages"],
     "i18n-ally.keystyle": "nested",
     "i18n-ally.sortKeys": true,
@@ -114,6 +115,7 @@
         "pngquant",
         "soerenmartius",
         "spacingjs",
+        "tailwindcss",
         "tinycolor",
         "unplugin",
         "Vite",

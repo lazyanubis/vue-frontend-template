@@ -14,7 +14,9 @@ const onChange = () =>
 
 <template>
     <div class="test">
-        <div class="test2" @click="onChange"> {{ t('test.test') }} </div>
+        <div class="test2 text-3xl font-bold underline" @click="onChange">
+            {{ t('test.test') }}
+        </div>
     </div>
 </template>
 
