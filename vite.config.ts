@@ -71,7 +71,7 @@ export default defineConfig(({ command, mode }) => {
                 // external: ["element-plus"], //! 天坑的，因为这个配置耗费了好几个小时，我白白的睡眠时间啊
                 output: {
                     manualChunks: {
-                        vue: ['vue', 'vue-router', 'vuex'], // 目前打包还是这个最小，还没有 bug
+                        vue: ['vue', 'vue-router'], // 目前打包还是这个最小，还没有 bug
                         'element-plus': ['element-plus'],
                     },
                     // manualChunks(id) {

@@ -118,7 +118,6 @@
         "unplugin",
         "Vite",
         "vueuse",
-        "vuex",
         "windi",
         "windicss"
     ]
