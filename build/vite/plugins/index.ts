@@ -5,6 +5,7 @@ import { ViteEnv } from '../../../types/model';
 import vue from '@vitejs/plugin-vue';
 import { viteHtmlPlugins } from './html';
 import { svgIconsPlugin } from './svgIcons';
+import { viteContent } from './content';
 import { styleImportPlugin } from './styleImport';
 import { viteCompressionPlugin } from './compression';
 import purgeIcons from 'vite-plugin-purge-icons';
@@ -27,6 +28,7 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
     vitePlugins.push(vue());
     vitePlugins.push(...viteHtmlPlugins(viteEnv, isBuild)); // 注入配置字符串
     vitePlugins.push(svgIconsPlugin(isBuild)); // svg 图标资源整合管理
+    vitePlugins.push(viteContent()); // 文件导入
     vitePlugins.push(styleImportPlugin(isBuild)); // 样式导入
     vitePlugins.push(purgeIcons({})); // 图片管理
     vitePlugins.push(visualizerPlugin()); // 可视化依赖分析，非生产模式
