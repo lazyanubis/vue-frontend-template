@@ -117,8 +117,6 @@
         "tinycolor",
         "unplugin",
         "Vite",
-        "vueuse",
-        "windi",
-        "windicss"
+        "vueuse"
     ]
 }

@@ -13,8 +13,8 @@ const onChange = () =>
 </script>
 
 <template>
-    <div class="test bg-dark-900">
-        <div class="test2 w-300" @click="onChange"> {{ t('test.test') }} </div>
+    <div class="test">
+        <div class="test2" @click="onChange"> {{ t('test.test') }} </div>
     </div>
 </template>
 

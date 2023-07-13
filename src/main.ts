@@ -7,8 +7,6 @@ import i18n from './locale';
 import router from './router';
 import App from './App.vue';
 
-import 'virtual:windi.css';
-
 const app = createApp(App);
 app.use(createPinia()).use(i18n).use(router);
 
