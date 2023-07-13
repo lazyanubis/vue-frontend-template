@@ -160,7 +160,7 @@ function getNodeEnv(mode: ConfigMode): string {
             env = 'development';
             break;
         case ConfigMode.production:
-            env = 'production'; // 后端用的是 ic
+            env = 'production';
             break;
         default:
             throw new Error(`what a config config mode: ${mode} ${ConfigMode[mode]}`);
