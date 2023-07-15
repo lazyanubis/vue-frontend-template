@@ -2,6 +2,8 @@
 import { createI18n } from 'vue-i18n/dist/vue-i18n.cjs.js';
 import commonLanguages from './languages/common';
 import { setHtmlPageLang } from './locales';
+import en from './languages/en';
+import zhCN from './languages/zh-CN';
 
 // 多语言选择用到的对象，给用户看的文字和对应语言之间的关系
 export class LanguageItem {
@@ -44,28 +46,10 @@ export function findLocaleByString(locale: string): SupportedLocale {
 }
 
 // 下面个根据语言枚举查找对应的语言包
-const messages = {};
-function getModules() {
-    const modules = import.meta.globEager('./languages/*.ts'); // 读取所有的语言包
-    const exists = {};
-    for (const m in modules) {
-        if (m.endsWith('common.ts')) continue;
-        // console.log('m', m);
-        const locale = m.replace('.ts', '').substring(12);
-        exists[locale] = modules[m];
-    }
-    // console.log(exists);
-    return exists;
-}
-const exists = getModules(); // 取得目录下的多语言模块
-for (const locale in SupportedLocale) {
-    const name = SupportedLocale[locale];
-    if (!exists[name]) {
-        console.error('lost language package: ' + name, exists); // 找不到语言包
-    }
-    messages[name] = { ...exists[name]['default'], ...commonLanguages }; // 匹配对应语言赋值，common里面的每个语言都要有一份
-}
-
+const messages = {
+    en: { ...en, ...commonLanguages },
+    'zh-CN': { ...zhCN, ...commonLanguages },
+};
 // console.log('messages', messages);
 
 const i18n = createI18n({
